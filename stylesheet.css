@@ -1,0 +1,26 @@
+#main_bg_lvl1
+{
+    /*background-image: url("./img/level1-clear.png");*/
+    width: 1000px;
+    height: 600px;
+    background-size: contain;
+    margin: 0 10%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+#img_lvl_1{
+    background-size: cover;
+    background-image: url("./img/level1-item1-pos-30x440-size-68x82.png");
+    width: 68px;
+    height: 82px;
+    position: inherit;
+    left: 5.3%;
+    top: 48.75%;
+    display: inline-block;
+}
+
+.img_position{
+    margin: 0 10%;
+    position: absolute;
+    top: 7px;
+}
