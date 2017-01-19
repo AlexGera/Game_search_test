@@ -18,11 +18,14 @@
     <link rel="stylesheet" href="./menu_modal_box.css">
 
 
+    <script type="text/javascript" src="./jquery.pietimer.js"></script>
+    <script type="text/javascript" src="./jquery.pietimer.min.js"></script>
 
 </head>
 <body>
 <div id="gamearea">
 
+    <div id="searchField">
     <img id="main_bg_lvl1" src="img/level1-clear.png" data-zoom-image="img/level1-clear.png">
 
 
@@ -40,6 +43,8 @@
 
 
     </div>
+
+    </div>
 </div>
 <div id="menuModalBox" class="modal">
 
@@ -49,6 +54,16 @@
         <div class="gmItem"> Audio <span id="gmSpanOn">on</span>/<span id="gmSpanOff">off</span></div>
         <div class="gmItem"> Convert 25 silver coins to 1 gold </div>
         <div class="gmItem" id="menuModalCloseBtn"> <strong> Back to game </strong> </div>
+    </div>
+
+</div>
+<div id="searchOverModalBox" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="gmTitle"> Game, actually NOT over: </div>
+        <div class="gmItem" id="buy10seconds"> Buy 10 seconds for 5 silver coins </div>
+        <div class="gmItem" id="backToAdvanture"> Back to advanture </div>
     </div>
 
 </div>
@@ -81,7 +96,7 @@
         <div class="find_element8 menu_box"></div>
         <div class="find_element9 menu_box"></div>
         <div class="find_element10 menu_box"></div>
-        <div class="bottom-boxes" id="bottom-box-11"></div>
+        <div class="bottom-boxes" id="bottom-box-11"><div id="element"></div></div>
     </div>
 
     <div class="bottom-boxes" id="bottom-box-12">

@@ -32,7 +32,7 @@ $(document).ready(function () {
             newValue = "x" + gamer_gold_coins;
             $("#coin_gold_count").val(newValue);
             console.log("new coins count " + gamer_gold_coins);
-         
+
         }
     }
 
@@ -276,5 +276,56 @@ $(document).ready(function () {
         return Math.floor(Math.random() * (max - min)) + min;
     }
 
+    $('#element').pietimer();
+    $('#element').pietimer({
+            seconds: 5,
+            color: 'rgba(0, 0, 0, 0.8)',
+            height: 96,
+            width: 96
+        },
+        function(){
+            $("#searchField").fadeOut('slow');
+            showSwarchOverMenu();
+        });
+    $('#element').pietimer('start');
+
+
+    var modal = $('#searchOverModalBox');
+    var backToAdvantureBtn = $('#backToAdvanture');
+    var buy10secBtn = $('#buy10seconds');
+
+    function showSwarchOverMenu() {
+        modal.css({display: "block"});
+    }
+
+    function hideSwarchOverMenu() {
+        modal.css({display: "none"});
+    }
+
+    backToAdvantureBtn.click(function () {
+        console.log("backToAdvanture");
+        hideSwarchOverMenu();
+    });
+
+    buy10secBtn.click( function () {
+        hideSwarchOverMenu();
+        // addSilverCoins(10);
+        $("#searchField").fadeIn("slow", function () {
+
+        });
+        $('#element').pietimer();
+        $('#element').pietimer({
+                seconds: 10,
+                color: 'rgba(0, 0, 0, 0.8)',
+                height: 96,
+                width: 96
+            },
+            function(){
+                $("#searchField").fadeOut('slow');
+
+            });
+        $('#element').pietimer('start');
+
+    })
 });
 
