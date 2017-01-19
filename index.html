@@ -10,6 +10,12 @@
 
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="./jquery.magnify.js"></script>
+    <!--menu modal box-->
+    <link rel="stylesheet" href="./menuBtn.css">
+
+    <!--menu modal box-->
+    <script type="text/javascript" src="./menu_modal_box.js"></script>
+    <link rel="stylesheet" href="./menu_modal_box.css">
 
 
 
@@ -17,26 +23,54 @@
 <body>
 <div id="gamearea">
 
-<img id="main_bg_lvl1" src="img/level1-clear.png" data-zoom-image="img/level1-clear.png">
+    <img id="main_bg_lvl1" src="img/level1-clear.png" data-zoom-image="img/level1-clear.png">
 
 
-<div class="img_position">
-<div class="img_lvl_1_1 img_click"></div>
-    <div class="img_lvl_1_2 img_click"></div>
-    <div class="img_lvl_1_3 img_click"></div>
-    <div class="img_lvl_1_4 img_click"></div>
-    <div class="img_lvl_1_5 img_click"></div>
-    <div class="img_lvl_1_6 img_click"></div>
-    <div class="img_lvl_1_7 img_click"></div>
-    <div class="img_lvl_1_8 img_click"></div>
-    <div class="img_lvl_1_9 img_click"></div>
-    <div class="img_lvl_1_1 img_click"></div>
+    <div class="img_position">
+        <div class="img_lvl_1_1 img_click"></div>
+        <div class="img_lvl_1_2 img_click"></div>
+        <div class="img_lvl_1_3 img_click"></div>
+        <div class="img_lvl_1_4 img_click"></div>
+        <div class="img_lvl_1_5 img_click"></div>
+        <div class="img_lvl_1_6 img_click"></div>
+        <div class="img_lvl_1_7 img_click"></div>
+        <div class="img_lvl_1_8 img_click"></div>
+        <div class="img_lvl_1_9 img_click"></div>
+        <div class="img_lvl_1_1 img_click"></div>
 
+
+    </div>
+</div>
+<div id="menuModalBox" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="gmTitle"> Game menu: </div>
+        <div class="gmItem"> Audio <span id="gmSpanOn">on</span>/<span id="gmSpanOff">off</span></div>
+        <div class="gmItem"> Convert 25 silver coins to 1 gold </div>
+        <div class="gmItem" id="menuModalCloseBtn"> <strong> Back to game </strong> </div>
+    </div>
 
 </div>
-</div><div id="control_panel">
-    <button id="glass"></button>
-    <div id="subjekt">
+<div id="menu">
+
+    <div class="bottom-boxes" id="bottom-box-1">
+
+        <div id="menuModalBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+
+    <div class="bottom-boxes" id="bottom-box-2"> </div>
+    <div class="bottom-boxes" id="bottom-box-3"> </div>
+    <div class="bottom-boxes" id="bottom-box-4"></div>
+
+    <div id="sashaMenu">
+        <div class="bottom-boxes" id="bottom-box-5"><button id="glass"></button></div>
         <div class="find_element1 menu_box"></div>
         <div class="find_element2 menu_box"></div>
         <div class="find_element3 menu_box"></div>
@@ -47,8 +81,16 @@
         <div class="find_element8 menu_box"></div>
         <div class="find_element9 menu_box"></div>
         <div class="find_element10 menu_box"></div>
+        <div class="bottom-boxes" id="bottom-box-11"></div>
     </div>
-</div>
 
+    <div class="bottom-boxes" id="bottom-box-12">
+        <div class="menu_coin" id="menu_coinA" > </div>
+        <div class="menu_coin" id="menu_coinA_gold" > </div>
+        <input type="text" name="coin_count" id="coin_silver_count" disabled >
+        <input type="text" name="coin_count" id="coin_gold_count" disabled >
+    </div>
+
+</div>
 </body>
 </html>

@@ -1,5 +1,41 @@
 $(document).ready(function () {
 
+    var gamer_silver_coins = 20;
+    var gamer_gold_coins = 1;
+
+    updateSilverCoinsCount(0);
+    updateGoldCoinsCount(0);
+
+
+    function updateSilverCoinsCount(count) {
+
+        console.log("now we have " + count + " silver coins");
+
+        if ((gamer_silver_coins + count) < 0) {
+            return;
+        } else {
+            gamer_silver_coins += count;
+            newValue = "x" + gamer_silver_coins;
+            $("#coin_silver_count").val(newValue);
+            console.log("new coins count " + gamer_silver_coins);
+            }
+    }
+
+    function updateGoldCoinsCount(count) {
+
+        console.log("now we have " + count + " gold coins");
+
+        if ((gamer_gold_coins + count) < 0) {
+            return;
+        } else {
+            gamer_gold_coins += count;
+            newValue = "x" + gamer_gold_coins;
+            $("#coin_gold_count").val(newValue);
+            console.log("new coins count " + gamer_gold_coins);
+         
+        }
+    }
+
 
 //
 
@@ -201,58 +237,6 @@ $(document).ready(function () {
         }
     });
 
-    //
-    // var items = [".img_lvl_1_2", ".img_lvl_1_1", ".img_lvl_1_3", ".img_lvl_1_4",
-    //     ".img_lvl_1_5", ".img_lvl_1_6", ".img_lvl_1_7", ".img_lvl_1_8", ".img_lvl_1_9",
-    //     "img_lvl_1_10"];
-    // var fantoms = [
-    //     ".img-box-1",
-    //     ".img-box-2",
-    //     ".img-box-3",
-    //     ".img-box-4",
-    //     ".img-box-5" ];
-    //
-    // function showFantomElement(fantom_img_number) {
-    //
-    // }
-    //
-    // var fantom_img = [
-    //     "./img/level1-item1-hide.png",
-    //     "./img/level1-item2-hide.png",
-    //     "./img/level1-item3-hide.png",
-    //     "./img/level1-item4-hide.png",
-    //     "./img/level1-item5-hide.png",
-    //     "./img/level1-item6-hide.png",
-    //     "./img/level1-item7-hide.png",
-    //     "./img/level1-item8-hide.png",
-    //     "./img/level1-item9-hide.png",
-    //     "./img/level1-item10-hide.png"
-    // ];
-    //
-    // var randNumbers = [];
-    //
-    // for (var i = 0; i < 5; i++) {
-    //
-    //     var currentRandNumber = getRandomInt(0, 9);
-    //
-    //     while ($.inArray(currentRandNumber, randNumbers) !== -1) {
-    //         currentRandNumber = getRandomInt(0, 9);
-    //     }
-    //
-    //     randNumbers.push(currentRandNumber)
-    // }
-    //
-    // for (var i = 0; i < randNumbers.length; i++) {
-    //     $(items[randNumbers[i]])
-    //         .css({
-    //             visibility: "visible"
-    //         });
-    //     $(fantoms[i])
-    //
-    //         .css({
-    //             "background-image": "url('" + fantom_img[randNumbers[i]]
-    //         });
-    // }
 
     var items = [".img_lvl_1_1",".img_lvl_1_2", ".img_lvl_1_3", ".img_lvl_1_4",
         ".img_lvl_1_5", ".img_lvl_1_6", ".img_lvl_1_7", ".img_lvl_1_8", ".img_lvl_1_9",
@@ -292,29 +276,5 @@ $(document).ready(function () {
         return Math.floor(Math.random() * (max - min)) + min;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    // function getRandomInt(min, max) {
-    //     return Math.floor(Math.random() * (max - min)) + min;
-    // }
-
-//
 });
-//
+
